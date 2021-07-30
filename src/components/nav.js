@@ -6,11 +6,11 @@ const Nav = () => {
         <div className="nav-bar">    
             <Link to="/">CARLOS LERTORA SÁEZ</Link>
             <div className="link-panel">
-                <Link to="/documental">CINE DOCUMENTAL</Link>
-                <Link to="/video">VIDEO</Link>
-                <Link to="/fotografia">FOTOGRAFIA</Link>
-                <Link to="/grafica">GRÁFICA&COLLAGE</Link>
-                <Link to="/sonoro">ARTE SONORO</Link>
+                <Link to="/documental">CINE_DOCUMENTAL /</Link>
+                <Link to="/video">VIDEO /</Link>
+                <Link to="/fotografia">FOTOGRAFIA /</Link>
+                <Link to="/grafica">GRÁFICA&COLLAGE /</Link>
+                <Link to="/sonoro">ARTE_SONORO /</Link>
                 <Link to="/talleres">TALLERES</Link>
             </div>
         </div>
