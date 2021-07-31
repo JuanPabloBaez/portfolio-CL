@@ -21,6 +21,7 @@ import './App.css';
 
 function App() {
   const [video, setVideo] = useState([]);
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
 
@@ -30,8 +31,9 @@ function App() {
         .then((response)=> {
             const data = response.items;
             const selectVideo = data.filter(item => item.sys.contentType.sys.id==="video");
-            setVideo(selectVideo)
-            console.log(video)
+            setVideo(selectVideo);
+            const selectPost = data.filter(item => item.sys.contentType.sys.id==="post")
+            setPosts(selectPost)
           return
         })
   
@@ -74,7 +76,7 @@ function App() {
           <Sonoro/>
         </Route>
         <Route path="/talleres">
-          <Talleres/>
+          <Talleres posts={posts}/>
         </Route>
       
       </Switch>
