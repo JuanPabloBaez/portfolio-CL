@@ -7,7 +7,7 @@ const Video = ({video}) => {
 
 
    return (
-       <div className="video-bosy">
+       <div className="video-body">
 
        
        {

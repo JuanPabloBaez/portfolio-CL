@@ -5,13 +5,14 @@ import {
   Route
 } from "react-router-dom";
 import {client} from './client';
-import Nav from './components/nav.js';
-import Documental from './components/documental.js';
-import Video from './components/video.js';
-import Fotografia from './components/fotografia.js';
-import Grafica from './components/grafica.js';
-import Sonoro from './components/sonoro.js';
-import Talleres from './components/talleres.js'
+import Nav from './components/nav';
+import Documental from './components/documental';
+import Video from './components/video';
+import Fotografia from './components/fotografia';
+import Grafica from './components/grafica';
+import Sonoro from './components/sonoro';
+import Talleres from './components/talleres'
+
 import './App.css';
 
 
@@ -30,7 +31,7 @@ function App() {
             const data = response.items;
             const selectVideo = data.filter(item => item.sys.contentType.sys.id==="video");
             setVideo(selectVideo)
-            console.log(selectVideo)
+            console.log(video)
           return
         })
   
@@ -63,7 +64,7 @@ function App() {
         <Route path="/video">
           <Video video={video}/>
         </Route>
-        <Route path="fotografia">
+        <Route path="/fotografia">
           <Fotografia/>
         </Route>
         <Route path="/grafica">
