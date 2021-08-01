@@ -3,7 +3,10 @@ import React from "react";
 
 const Documental = () => {
     return(
-        <h1>documental</h1>
+        <div className="documental-body">
+            <h1>documental</h1>
+        </div>
+        
     )
 }
 

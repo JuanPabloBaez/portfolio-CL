@@ -11,8 +11,8 @@ import Video from './components/video';
 import Fotografia from './components/fotografia';
 import Grafica from './components/grafica';
 import Sonoro from './components/sonoro';
-import Talleres from './components/talleres'
-
+import Talleres from './components/talleres';
+import videoBackground from './images/video-background.mp4';
 import './App.css';
 
 
@@ -45,27 +45,25 @@ function App() {
 
   }, []);
 
-
-
-
-  
-
-
   return (
     <Router>
       <Nav/>
       <Switch>
+
         <Route exact path="/">
-          <div className="App">
-            <h1>hi there!</h1>
-          </div>
+          <video id="background-video" loop autoPlay >
+            <source src={videoBackground} type="video/mp4" />    
+          </video>
         </Route>
+
         <Route path="/documental">
           <Documental/>
         </Route>
+
         <Route path="/video">
           <Video video={video}/>
         </Route>
+
         <Route path="/fotografia">
           <Fotografia/>
         </Route>
