@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
 }
 #root{
   background-color: black;
@@ -49,7 +50,7 @@
 }
 /*    OTHER PAGES GENERAL   */
 
-.documental-body, .video-body, .foto-body, .grafica-body, .taller-body  {
+.documental-body, .video-body, .foto-body, .grafica-body, .sonoro-body  {
   display: flex;
   justify-content: center;
   padding-top: 10vh;
@@ -102,6 +103,38 @@
 .page-right-arrow{
   right: -5%;
 }
+/*    SONORO     */
+.sonoro-body {
+  height: 100vh;
+}
+.sonoro-player{
+  margin-top: 10vh;
+}
+/*    TALLER     */
+.taller-body{
+  padding-top: 12vh;
+  flex-direction: column;
+  background-color: ghostwhite;
+  width: inherit;
+}
+.post-container {
+  margin: 1% 2%;
+  display: flex;
+}
+.post-container img {
+  height: 40vh;
+}
+.post-text{
+  margin: 0 2%;
+  padding: 2% 0;
+  display: flex;
+  flex-direction: column;
+}
+.post-text p {
+  margin-top: auto;
+}
+
+
 
 
 
