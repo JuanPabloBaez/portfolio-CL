@@ -51,7 +51,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="home-body">
-            <video id="background-video" loop autoPlay >
+            <video id="background-video" loop autoPlay muted >
               <source src={videoBackground} type="video/mp4" />    
             </video>
           </div>
