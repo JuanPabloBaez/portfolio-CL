@@ -9,7 +9,7 @@ const Nav = () => {
                 <Link to="/documental">CINE_DOCUMENTAL /</Link>
                 <Link to="/video">VIDEO /</Link>
                 <Link to="/fotografia">FOTOGRAFíA /</Link>
-                <Link to="/grafica">GRÁFICA&COLLAGE /</Link>
+                <Link to="/grafica">GRÁFICA&#38;COLLAGE /</Link>
                 <Link to="/sonoro">ARTE_SONORO /</Link>
                 <Link to="/talleres">TALLERES</Link>
             </div>

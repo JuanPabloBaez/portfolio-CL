@@ -70,7 +70,11 @@
   flex-direction: column;
   color: ghostwhite;
   overflow:scroll;
- 
+  position: relative;
+  justify-content: start;
+  padding-bottom: 10vh;
+  height: 100vh;
+  
 }
 .video-container {
   margin: 1% auto;
@@ -129,6 +133,7 @@
   background-color: ghostwhite;
   width: inherit;
   position: relative;
+  padding-bottom: 10vh;
 }
 .post-container {
   margin: 1% 2%;
@@ -161,6 +166,11 @@ footer {
   color: ghostwhite;
   top: 95vh;
   font-size: 0.9em;
+}
+footer a {
+  text-decoration: none;
+  color: currentColor;
+  font-style: oblique;
 }
 
 .social {

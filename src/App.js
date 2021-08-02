@@ -24,6 +24,7 @@ import './App.css';
 
 function App() {
   const [video, setVideo] = useState([]);
+  const [documental, setDocumental] = useState([])
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -35,6 +36,8 @@ function App() {
             const data = response.items;
             const selectVideo = data.filter(item => item.sys.contentType.sys.id==="video");
             setVideo(selectVideo);
+            const selectDocumental = data.filter(item => item.sys.contentType.sys.id==="documental");
+            setDocumental(selectDocumental);
             const selectPost = data.filter(item => item.sys.contentType.sys.id==="post")
             setPosts(selectPost)
           return
@@ -62,13 +65,11 @@ function App() {
         </Route>
 
         <Route path="/documental">
-          <Documental/>
+          <Documental documental={documental}/>
         </Route>
-
         <Route path="/video">
           <Video video={video}/>
         </Route>
-
         <Route path="/fotografia">
           <Fotografia/>
         </Route>
@@ -83,17 +84,13 @@ function App() {
         </Route>
       </Switch>
       <footer>
-        <p>copyright Carlos Lertora 2021</p>
+        <p>&copy; Carlos Lertora 2021</p>
         <div className="social">
           <p>carloslertora@gmail.com</p>
           <a href="https://vimeo.com/carloslertora" target="_blank" rel="noreferrer" ><img src={Vimeo} alt="video icon"></img></a>
           <a href="https://www.instagram.com/carlos_lertora/" target="_blank" rel="noreferrer"><img src={Instagram} alt="video icon"></img></a>
-
-          
-
-        </div>
-        
-        <p>website: Juan Pablo Baez</p>
+        </div>        
+        <p>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
       </footer>
     </Router>
   );
