@@ -32,10 +32,10 @@
 }
 .link-panel {
   display: flex;
-  width: auto;
   justify-content:flex-end;
   flex-wrap: wrap;
-  width: 65%;
+  width: 68%;
+  
 }
 .link-panel a {
   margin: 0 0.5%;
@@ -138,9 +138,11 @@
 .post-container {
   margin: 1% 2%;
   display: flex;
+  margin-bottom: 3%;
 }
 .post-container img {
   height: 40vh;
+  object-fit: contain;
 }
 .post-text{
   margin: 0 2%;
@@ -188,6 +190,19 @@ footer a {
   font-size: 1.2em;
 }
 
-
+@media only screen and (max-width: 600px) {
+  .nav-bar {
+    height:fit-content;
+    min-height: 10vh;
+    flex-wrap: nowrap;
+  }
+  footer{
+    height: 10vh;
+    top: 90vh;
+  }
+  .post-container {
+    flex-direction: column;
+  }
+}
 
 

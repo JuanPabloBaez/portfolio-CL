@@ -10,12 +10,12 @@ const Grafica = () => {
     }
     const fotoItems = importAll(require.context('../images/grafica', false, /,*\.jpg$/));
    
-     /*  useEffect(() => {
+      useEffect(() => {
       const interval = setInterval(() => {
         setCurrent(current === fotoItems.length - 1 ? 0 : current + 1)
       },5000);
       return () => clearInterval(interval);
-    },[current, fotoItems.length ])  */
+    },[current, fotoItems.length ]) 
    
     const nextSlide = () => {
       setCurrent( current === fotoItems.length - 1 ? 0 : current + 1);
