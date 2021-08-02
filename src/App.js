@@ -13,6 +13,9 @@ import Grafica from './components/grafica';
 import Sonoro from './components/sonoro';
 import Talleres from './components/talleres';
 import videoBackground from './images/video-background.mp4';
+import Vimeo from './images/vimeo.svg';
+import Instagram from './images/instagram.svg';
+
 import './App.css';
 
 
@@ -51,9 +54,11 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <video id="background-video" loop autoPlay >
-            <source src={videoBackground} type="video/mp4" />    
-          </video>
+          <div className="home-body">
+            <video id="background-video" loop autoPlay >
+              <source src={videoBackground} type="video/mp4" />    
+            </video>
+          </div>
         </Route>
 
         <Route path="/documental">
@@ -76,8 +81,20 @@ function App() {
         <Route path="/talleres">
           <Talleres posts={posts}/>
         </Route>
-      
       </Switch>
+      <footer>
+        <p>copyright Carlos Lertora 2021</p>
+        <div className="social">
+          <p>carloslertora@gmail.com</p>
+          <a href="https://vimeo.com/carloslertora" target="_blank" rel="noreferrer" ><img src={Vimeo} alt="video icon"></img></a>
+          <a href="https://www.instagram.com/carlos_lertora/" target="_blank" rel="noreferrer"><img src={Instagram} alt="video icon"></img></a>
+
+          
+
+        </div>
+        
+        <p>website: Juan Pablo Baez</p>
+      </footer>
     </Router>
   );
 }
