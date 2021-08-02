@@ -15,11 +15,7 @@ import Talleres from './components/talleres';
 import videoBackground from './images/video-background.mp4';
 import Vimeo from './images/vimeo.svg';
 import Instagram from './images/instagram.svg';
-
 import './App.css';
-
-
-
 
 
 function App() {
@@ -28,7 +24,6 @@ function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-
     async function getEntries() {
       try{
         client.getEntries()
@@ -42,7 +37,6 @@ function App() {
             setPosts(selectPost)
           return
         })
-  
       }catch(error){
         console.log('fatal error')
       }
@@ -55,7 +49,6 @@ function App() {
     <Router>
       <Nav/>
       <Switch>
-
         <Route exact path="/">
           <div className="home-body">
             <video id="background-video" loop autoPlay >
@@ -63,7 +56,6 @@ function App() {
             </video>
           </div>
         </Route>
-
         <Route path="/documental">
           <Documental documental={documental}/>
         </Route>
@@ -84,7 +76,7 @@ function App() {
         </Route>
       </Switch>
       <footer>
-        <p>&copy; Carlos Lertora 2021</p>
+        <p>&copy; Carlos Lértora 2021</p>
         <div className="social">
           <p>carloslertora@gmail.com</p>
           <a href="https://vimeo.com/carloslertora" target="_blank" rel="noreferrer" ><img src={Vimeo} alt="video icon"></img></a>
