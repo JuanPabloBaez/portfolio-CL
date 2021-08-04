@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 const Documental = ({documental}) => {
     return(
         <div className="documental-body">
+            <h4 className="patrocinio">El catalogo online completo disponible en ALGOALGO</h4>
             {
                 documental.map((item, index) => {
                     if (item.fields.link) {

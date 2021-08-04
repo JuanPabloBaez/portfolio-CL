@@ -35,6 +35,7 @@
   justify-content:flex-end;
   flex-wrap: wrap;
   width: 68%;
+  color: ghostwhite;
   
 }
 .link-panel a {
@@ -80,6 +81,9 @@
   margin: 1% auto;
   width: 90%;
   max-width: 700px;
+}
+.patrocinio{
+  margin: 2% auto;
 }
 /*    FOTO AND GRAFICA */
 .page-slider{
@@ -167,7 +171,7 @@ footer {
   position: absolute;
   color: ghostwhite;
   top: 95vh;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 footer a {
   text-decoration: none;
@@ -187,7 +191,7 @@ footer a {
   margin: 0 10%;
 }
 .social p {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 @media only screen and (max-width: 600px) {
