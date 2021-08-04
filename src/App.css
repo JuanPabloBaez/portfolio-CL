@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Hospital medium';
 }
 #root{
   background-color: black;
@@ -28,7 +28,7 @@
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .link-panel {
   display: flex;
@@ -41,7 +41,7 @@
   margin: 0 0.5%;
   text-decoration: none;
   color: currentColor;
-  font-size: 1em;
+  font-size: 1.1em;
   color: white;
 } 
 /*    HOME PAGE */

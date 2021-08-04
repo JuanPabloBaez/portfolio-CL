@@ -15,6 +15,7 @@ import Talleres from './components/talleres';
 import videoBackground from './images/video-background.mp4';
 import Vimeo from './images/vimeo.svg';
 import Instagram from './images/instagram.svg';
+import './fonts/font.css'
 import './App.css';
 
 
