@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -49,6 +49,7 @@ function App() {
     <Router>
       <Nav/>
       <Switch>
+
         <Route exact path="/">
           <div className="home-body">
             <video id="background-video" loop autoPlay muted >
@@ -56,6 +57,7 @@ function App() {
             </video>
           </div>
         </Route>
+
         <Route path="/documental">
           <Documental documental={documental} video={video}/>
         </Route>
@@ -63,16 +65,20 @@ function App() {
         <Route path="/fotografia">
           <Fotografia/>
         </Route>
+
         <Route path="/grafica">
           <Grafica/>
         </Route>
+
         <Route path="/sonoro">
           <Sonoro/>
         </Route>
+        
         <Route path="/talleres">
           <Talleres posts={posts}/>
         </Route>
       </Switch>
+
       <footer>
         <p>&copy; Carlos Lértora 2021</p>
         <div className="social">
