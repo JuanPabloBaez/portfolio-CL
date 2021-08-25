@@ -7,7 +7,6 @@ import {
 import {client} from './client';
 import Nav from './components/nav';
 import Documental from './components/documental';
-import Video from './components/video';
 import Fotografia from './components/fotografia';
 import Grafica from './components/grafica';
 import Sonoro from './components/sonoro';
@@ -58,11 +57,9 @@ function App() {
           </div>
         </Route>
         <Route path="/documental">
-          <Documental documental={documental}/>
+          <Documental documental={documental} video={video}/>
         </Route>
-        <Route path="/video">
-          <Video video={video}/>
-        </Route>
+        
         <Route path="/fotografia">
           <Fotografia/>
         </Route>

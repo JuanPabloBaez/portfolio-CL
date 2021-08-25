@@ -6,8 +6,7 @@ const Nav = () => {
         <div className="nav-bar">    
             <Link to="/" className="logo">CARLOS LERTORA SÁEZ</Link>
             <div className="link-panel">
-                <Link to="/documental">DOCUMENTAL </Link>/
-                <Link to="/video">VIDEO </Link>/
+                <Link to="/documental">DOCUMENTAL & VIDEO </Link>/
                 <Link to="/talleres">TALLERES </Link>/
                 <Link to="/fotografia">FOTOGRAFíA </Link>/
                 <Link to="/grafica">GRÁFICA </Link>/

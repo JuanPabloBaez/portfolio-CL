@@ -58,7 +58,7 @@
 }
 /*    OTHER PAGES GENERAL   */
 
-.documental-body, .video-body, .foto-body, .grafica-body, .sonoro-body  {
+.documental-body, .foto-body, .grafica-body, .sonoro-body  {
   display: flex;
   justify-content: center;
   padding-top: 10vh;
@@ -66,8 +66,9 @@
   max-width: 95%;
   margin: 0 auto;
 }
+
 /*   DOCU AND VIDEO   */
-.documental-body, .video-body {
+.documental-body {
   flex-direction: column;
   color: ghostwhite;
   overflow:scroll;
@@ -75,16 +76,29 @@
   justify-content: start;
   padding-bottom: 10vh;
   height: 100vh;
-  
+}
+h2 {
+  margin: 2% 20%;
+  font-size: 1.7em;
 }
 .video-container {
-  margin: 1% auto;
+  margin: 0 auto;
   width: 90%;
   max-width: 700px;
+  margin-bottom: 3%;
+}
+.page-video iframe{
+  object-fit: cover;
+  
+}
+.video-container h3, p {
+  margin: 2% 0;
 }
 .patrocinio{
   margin: 2% auto;
 }
+
+
 /*    FOTO AND GRAFICA */
 .page-slider{
   width: 90%;
