@@ -41,7 +41,7 @@ const Imagen = ({images}) => {
         return
       }
       setImages();
-    }, [images])
+    }, [images]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
     function handleGallery () {
@@ -56,14 +56,14 @@ const Imagen = ({images}) => {
       }
     }
              
-    console.log(galleryPic)
+    
   return (
     <div className="image-body">
         <button onClick={handleGallery} >{images===collages ? <p><b>Gráfica</b> / Fototgrafía</p>: <p>Gráfica / <b>Fototgrafía</b> </p>}</button>
 
         {galleryPic.map((pic, index) => {
           return(
-          <img className="gallery-img" src={pic.src} alt={pic.caption} />
+          <img className="gallery-img" key={index} src={pic.src} alt={pic.caption} />
           )
        })}
         
