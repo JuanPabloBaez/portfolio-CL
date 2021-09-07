@@ -8,8 +8,7 @@ const Nav = () => {
             <div className="link-panel">
                 <Link to="/documental">DOCUMENTAL & VIDEO </Link>/
                 <Link to="/talleres">TALLERES </Link>/
-                <Link to="/fotografia">FOTOGRAFíA </Link>/
-                <Link to="/grafica">GRÁFICA </Link>/
+                <Link to="/imagen">IMAGEN </Link>/
                 <Link to="/sonoro">ARTE_SONORO </Link>
             </div>
         </div>

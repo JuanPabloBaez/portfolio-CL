@@ -7,8 +7,7 @@ import {
 import {client} from './client';
 import Nav from './components/nav';
 import Documental from './components/documental';
-import Fotografia from './components/fotografia';
-import Grafica from './components/grafica';
+import Imagen from './components/imagen';
 import Sonoro from './components/sonoro';
 import Talleres from './components/talleres';
 import videoBackground from './images/video-background.mp4';
@@ -21,7 +20,7 @@ import './App.css';
 function App() {
   const [video, setVideo] = useState([]);
   const [documental, setDocumental] = useState([])
-  const [posts, setPosts] = useState([])
+  const [images, setImages] = useState([])
 
   useEffect(() => {
     async function getEntries() {
@@ -33,8 +32,8 @@ function App() {
             setVideo(selectVideo);
             const selectDocumental = data.filter(item => item.sys.contentType.sys.id==="documental");
             setDocumental(selectDocumental);
-            const selectPost = data.filter(item => item.sys.contentType.sys.id==="post")
-            setPosts(selectPost)
+            const selectImages = data.filter(item => item.sys.contentType.sys.id==="image")
+            setImages(selectImages)
           return
         })
       }catch(error){
@@ -45,11 +44,12 @@ function App() {
 
   }, []);
 
+  
+
   return (
     <Router>
       <Nav/>
       <Switch>
-
         <Route exact path="/">
           <div className="home-body">
             <video id="background-video" loop autoPlay muted >
@@ -57,25 +57,20 @@ function App() {
             </video>
           </div>
         </Route>
-
         <Route path="/documental">
           <Documental documental={documental} video={video}/>
         </Route>
         
-        <Route path="/fotografia">
-          <Fotografia/>
-        </Route>
-
-        <Route path="/grafica">
-          <Grafica/>
+        <Route path="/imagen">
+          <Imagen images={images}/>
         </Route>
 
         <Route path="/sonoro">
           <Sonoro/>
         </Route>
-        
+
         <Route path="/talleres">
-          <Talleres posts={posts}/>
+          <Talleres />
         </Route>
       </Switch>
 

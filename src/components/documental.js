@@ -38,7 +38,7 @@ const Documental = ({documental, video}) => {
                                 className="page-video"
                                 url={item.fields.link}
                                 controls={true}
-                                responsive={true}
+                                responsive="true"
                                 width="100%"
                                 height="50vh"
                                 config={{ 
@@ -46,7 +46,7 @@ const Documental = ({documental, video}) => {
                                         playerOptions:{
                                             height: "100%",
                                             width:"100%",
-                                            responsive: false,
+                                            responsive: "false",
                                             
                                             
                                         }
