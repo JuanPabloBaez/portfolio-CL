@@ -65,7 +65,7 @@ function App() {
           <Imagen images={images}/>
         </Route>
 
-        <Route path="/sonoro">
+        <Route path="/sonido">
           <Sonoro/>
         </Route>
 
