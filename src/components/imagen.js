@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-/* import Gallery from "react-photo-gallery"; */
-/* import Carousel, { Modal, ModalGateway } from "react-images"; */
+import { Gallery } from 'react-grid-litebox';
+import 'react-grid-litebox/dist/index.css';
 
 
 
@@ -16,7 +16,7 @@ const Imagen = ({images}) => {
           thumbnail: item.fields.src.fields.file.url,
           thumbnailWidth: 271,
           thumbnailHeight: 320,
-          caption: item.fields.caption
+          alt: item.fields.caption
         }
       )
     });
@@ -28,7 +28,7 @@ const Imagen = ({images}) => {
          thumbnail: item.fields.src.fields.file.url,
          thumbnailWidth: 271,
          thumbnailHeight: 320,
-         caption: item.fields.caption
+         alt: item.fields.caption
        }
      )
    });
@@ -54,18 +54,22 @@ const Imagen = ({images}) => {
         setGalleryName("photos")
         return
       }
-    }
-             
+    };
+          
     
   return (
     <div className="image-body">
         <button onClick={handleGallery} >{images===collages ? <p><b>Gráfica</b> / Fototgrafía</p>: <p>Gráfica / <b>Fototgrafía</b> </p>}</button>
 
-        {galleryPic.map((pic, index) => {
+        
+        <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>
+        
+        
+        {/* {galleryPic.map((pic, index) => {
           return(
           <img className="gallery-img" key={index} src={pic.src} alt={pic.caption} />
           )
-       })}
+       })} */}
         
     </div>
   )
