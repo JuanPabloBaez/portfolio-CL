@@ -115,7 +115,12 @@ h2 {
 }
 .image-body button {
   position: absolute;
-  top: 11vh;
+  top: 10vh;
+  font-size: 1em;
+  padding: 2px 5px;
+  background-color: hsla(240, 100%, 99%, 1);
+  border: 1.5px solid ghostwhite;
+  border-radius: 5px;
 }
 .gallery-img {
   max-height: 40%;
