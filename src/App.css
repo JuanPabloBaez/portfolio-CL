@@ -82,7 +82,7 @@ h2 {
 }
 .video-container {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   max-width: 700px;
   margin-bottom: 3%;
 }
@@ -118,14 +118,12 @@ h2 {
   top: 10vh;
   font-size: 1em;
   padding: 2px 5px;
-  background-color: hsla(240, 100%, 99%, 1);
+  background: none;
   border: 1.5px solid ghostwhite;
+  color: ghostwhite;
   border-radius: 5px;
 }
-.gallery-img {
-  max-height: 40%;
-  object-fit: contain;
-}
+
 
 /*    SONORO     */
 .sonoro-body {
@@ -137,34 +135,7 @@ h2 {
   max-width: 700px;
 }
 /*    TALLER     */
-.taller-body{
-  height: 100vh;
-  padding-top: 12vh;
-  overflow:scroll;
-  flex-direction: column;
-  background-color: ghostwhite;
-  width: inherit;
-  position: relative;
-  padding-bottom: 10vh;
-}
-.post-container {
-  margin: 1% 2%;
-  display: flex;
-  margin-bottom: 3%;
-}
-.post-container img {
-  height: 40vh;
-  object-fit: contain;
-}
-.post-text{
-  margin: 0 2%;
-  padding: 2% 0;
-  display: flex;
-  flex-direction: column;
-}
-.post-text p {
-  margin-top: auto;
-}
+
 
 footer {
   background-color: hsla(0, 0%, 0%, 0.3);
@@ -196,16 +167,19 @@ footer a {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  
 }
-.social img {
-  height: 3vh;
-  margin: 0 10%;
+.social a {
+  height: fit-content;
+}
+#insta-logo {
+  height: 4vh;
 }
 .social p {
   font-size: 1.3em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
   .nav-bar {
     height:fit-content;
     min-height: 10vh;
@@ -214,6 +188,17 @@ footer a {
   footer{
     height: 10vh;
     top: 90vh;
+  }
+  .social {
+    justify-content: flex-start;
+    
+    gap: 3%;
+  }
+  #insta-logo {
+    position: absolute;
+    bottom: 2.5vh;
+    right: 2%;
+    height: 6vh;
   }
   .post-container {
     flex-direction: column;

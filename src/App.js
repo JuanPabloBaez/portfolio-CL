@@ -9,9 +9,7 @@ import Nav from './components/nav';
 import Documental from './components/documental';
 import Imagen from './components/imagen';
 import Sonoro from './components/sonoro';
-import Talleres from './components/talleres';
 import videoBackground from './images/video-background.mp4';
-import Vimeo from './images/vimeo.svg';
 import Instagram from './images/instagram.svg';
 import './fonts/font.css'
 import './App.css';
@@ -69,17 +67,13 @@ function App() {
           <Sonoro/>
         </Route>
 
-        <Route path="/talleres">
-          <Talleres />
-        </Route>
       </Switch>
 
       <footer>
         <p>&copy; Carlos Lértora 2021</p>
         <div className="social">
           <p>carloslertora@gmail.com</p>
-          <a href="https://vimeo.com/carloslertora" target="_blank" rel="noreferrer" ><img src={Vimeo} alt="video icon"></img></a>
-          <a href="https://www.instagram.com/carlos_lertora/" target="_blank" rel="noreferrer"><img src={Instagram} alt="video icon"></img></a>
+          <a href="https://www.instagram.com/carlos_lertora/" target="_blank" rel="noreferrer"><img id="insta-logo" src={Instagram} alt="video icon"></img></a>
         </div>        
         <p>website:  <a href="http://jpbaez.com/" target="_blank" rel="noreferrer">Juan Pablo Baez</a></p>
       </footer>
