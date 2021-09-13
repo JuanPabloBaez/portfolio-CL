@@ -13,9 +13,6 @@ const Imagen = ({images}) => {
        return (
          { 
           src: item.fields.src.fields.file.url, 
-          thumbnail: item.fields.src.fields.file.url,
-          thumbnailWidth: 271,
-          thumbnailHeight: 320,
           alt: item.fields.caption
         }
       )
@@ -25,9 +22,6 @@ const Imagen = ({images}) => {
       return (
         { 
          src: item.fields.src.fields.file.url, 
-         thumbnail: item.fields.src.fields.file.url,
-         thumbnailWidth: 271,
-         thumbnailHeight: 320,
          alt: item.fields.caption
        }
      )
