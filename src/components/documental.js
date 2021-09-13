@@ -7,8 +7,9 @@ const Documental = ({documental, video}) => {
 
     useEffect(() =>{
         setVideoList(documental);
+        
         return
-    },[])
+    },[documental])
 
 
    function handleDoculist () {
@@ -18,7 +19,7 @@ const Documental = ({documental, video}) => {
         setVideoList(video)
    }
     
-    console.log(videoList)
+    
     return(
         <div className="documental-body">
 
