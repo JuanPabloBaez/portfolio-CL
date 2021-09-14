@@ -53,7 +53,7 @@ const Imagen = ({images}) => {
     
   return (
     <div className="image-body">
-        <button onClick={handleGallery} >{galleryName==="collages" ? <p><b>COLLAGE</b> / FOTOGRAFÍA</p>: <p>COLLAGE / <b>FOTOGRAFÍA</b> </p>}</button>
+        <button onClick={handleGallery} >{galleryName==="photos" ? <p><b>FOTOGRAFÍA</b> / COLLAGE</p>: <p>FOTOGRAFÍA / <b>COLLAGE</b> </p>}</button>
 
         
         <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>
