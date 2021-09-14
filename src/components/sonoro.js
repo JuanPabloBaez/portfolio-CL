@@ -10,7 +10,7 @@ const Sonoro = () => {
             url="https://soundcloud.com/carloslertora/ojos-de-agua"
             responsive="true"
             width="80%"
-            height="15vh"
+            height="12vh"
             config={{
                 soundcloud: {
                     options:{
@@ -27,7 +27,7 @@ const Sonoro = () => {
             url="https://soundcloud.com/carloslertora/estados-de-la-materia"
             responsive="true"
             width="80%"
-            height="15vh"
+            height="12vh"
             config={{
                 soundcloud: {
                     options:{
@@ -43,8 +43,8 @@ const Sonoro = () => {
             className="sonoro-player"
             url="https://soundcloud.com/carloslertora/sonadores-cosmicos-yerko-andrade"
             responsive="true"
-            width="80%"
-            height="15vh"
+            width="70%"
+            height="12vh"
             config={{
                 soundcloud: {
                     options:{
@@ -61,7 +61,7 @@ const Sonoro = () => {
             url="https://soundcloud.com/carloslertora/el-retorno-a-la-aldea"
             responsive="true"
             width="80%"
-            height="15vh"
+            height="12vh"
             config={{
                 soundcloud: {
                     options:{
