@@ -24,10 +24,10 @@ const Documental = ({documental, video}) => {
         <div className="documental-body">
 
             <div className="buttons">
-                <button onClick={handleDoculist} >DOCUMENTAL</button>/
-                <button onClick={handleVideolist}>VIDEO</button>/
-                <button>MUSICA</button>/
-                <button>TALLERES</button>     
+                <button onClick={handleDoculist} className={videoList===documental ? "list-active": "list-off"} >DOCUMENTAL</button>/
+                <button onClick={handleVideolist} className={videoList===video ? "list-active": "list-off"}>VIDEO</button>/
+                <button className={"list-off"}>MUSICA</button>/
+                <button className={"list-off"}>TALLERES</button>     
             </div>
             
             { videoList===documental &&  

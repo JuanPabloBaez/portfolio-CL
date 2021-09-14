@@ -87,10 +87,16 @@
   background: none;
   border: none;
 }
+.list-active{
+  font-weight: 600;
+}
+.list-off {
+  opacity: 0.7;
+}
 
 .patrocinio{
   margin: 2% auto;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .patrocinio a{
   text-decoration: none;
