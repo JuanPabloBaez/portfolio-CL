@@ -17,7 +17,7 @@
   height: 10vh;
   width: 100%;
   background-color: hsla(0, 0%, 0%, 0.3);
-  padding: 0 2%;
+  padding: 0 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,14 +36,16 @@
   flex-wrap: wrap;
   width: 68%;
   color: ghostwhite;
+  line-height: 1.5em;
   
 }
 .link-panel a {
-  margin: 0 0.5%;
+  margin: 0 1%;
   text-decoration: none;
   color: currentColor;
   font-size: 1.1em;
   color: white;
+  
 } 
 /*    HOME PAGE */
 .home-body{
@@ -56,18 +58,14 @@
   object-fit: cover;
   z-index: 0;
 }
-/*    OTHER PAGES GENERAL   */
 
-.documental-body, .sonoro-body  {
+/*   DOCU   */
+.documental-body {
   display: flex;
-  justify-content: center;
+  align-items: center;
   padding-top: 10vh;
   max-width: 95%;
   margin: 0 auto;
-}
-
-/*   DOCU AND VIDEO   */
-.documental-body {
   flex-direction: column;
   color: ghostwhite;
   overflow:scroll;
@@ -77,8 +75,9 @@
   height: 100vh;
 }
 .buttons{
-  width: 90%;
-  margin: 2% auto;
+  width: 80%;
+  margin: 4% auto;
+  line-height: 1.5em;
 }
 .buttons button {
   margin: 0 1%;
@@ -95,8 +94,9 @@
 }
 
 .patrocinio{
-  margin: 2% auto;
-  font-size: 1.3em;
+  margin-bottom: 2%;
+  font-size: 1.25em;
+  text-align: center;
 }
 .patrocinio a{
   text-decoration: none;
@@ -108,14 +108,16 @@
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
-  margin-bottom: 3%;
+  margin-bottom: 4%;
 }
 .page-video iframe{
   object-fit: cover;
   
 }
-.video-container h3, p {
-  margin: 2% 0;
+.video-title {
+  font-size: 1.4em;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 
@@ -149,6 +151,11 @@
 
 /*    SONORO     */
 .sonoro-body {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  max-width: 95%;
+  margin: 0 auto;
   height: 100vh;
   padding-top: 15vh;
   padding-bottom: 10vh;
@@ -197,6 +204,8 @@ footer a {
 }
 .social a {
   height: fit-content;
+  font-style: normal;
+  font-size: 1.3em;
 }
 #insta-logo {
   height: 4vh;
@@ -217,7 +226,6 @@ footer a {
   }
   .social {
     justify-content: flex-start;
-    
     gap: 3%;
   }
   #insta-logo {
@@ -225,6 +233,10 @@ footer a {
     bottom: 2.5vh;
     right: 2%;
     height: 6vh;
+  }
+
+  .buttons button {
+    font-size: 1.1em;
   }
   .post-container {
     flex-direction: column;
