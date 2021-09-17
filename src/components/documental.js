@@ -2,7 +2,7 @@ import React, {  useEffect, useState } from "react";
 import ReactPlayer from 'react-player';
 
 
-const Documental = ({documental, video}) => {
+const Documental = ({documental, video, musical, talleres}) => {
     const [videoList, setVideoList] = useState([]);
 
     useEffect(() =>{
@@ -18,6 +18,12 @@ const Documental = ({documental, video}) => {
    function handleVideolist () {
         setVideoList(video)
    }
+   function handleMusicalist () {
+    setVideoList(musical)
+}
+function handleTallereslist () {
+    setVideoList(talleres)
+}
     
     
     return(
@@ -25,9 +31,9 @@ const Documental = ({documental, video}) => {
 
             <div className="buttons">
                 <button onClick={handleDoculist} className={videoList===documental ? "list-active": "list-off"} >DOCUMENTAL</button>/
-                <button onClick={handleVideolist} className={videoList===video ? "list-active": "list-off"}>VIDEO</button>/
-                <button className={"list-off"}>MUSICA</button>/
-                <button className={"list-off"}>TALLERES</button>     
+                <button onClick={handleVideolist} className={videoList===video ? "list-active": "list-off"}>EXPERIMENTAL</button>/
+                <button onClick={handleMusicalist} className={videoList===musical ? "list-active": "list-off"}>MUSICAL</button>/
+                <button onClick={handleTallereslist} className={videoList===talleres ? "list-active": "list-off"}>TALLERES</button>     
             </div>
             
             { videoList===documental &&  
@@ -45,9 +51,14 @@ const Documental = ({documental, video}) => {
                                 responsive="true"
                                 width="100%"
                                 height="50vh"
+                                config={{
+                                    youtube: {
+                                        embedOptions: {  showinfo: 0 }
+                                    }
+                                  }}
                                 /> 
-                                <h3>{item.fields.title}</h3>
-                                <p>{item.fields.description}</p>
+                                <p className="video-title">{item.fields.title}</p>
+                                <p className="video-description">{item.fields.description}</p>
                             </div>
                         )
                     } return null
