@@ -110,10 +110,7 @@
   max-width: 700px;
   margin-bottom: 4%;
 }
-.page-video iframe{
-  object-fit: cover;
-  
-}
+
 .video-title {
   font-size: 1.4em;
   margin-top: 1%;
