@@ -9,10 +9,8 @@
   background-color: black;
   height: 100%;
   position: relative;
-  
 }
-
-/*    NAV    */
+            /*    NAV    */
 .nav-bar {
   height: 10vh;
   width: 100%;
@@ -37,7 +35,6 @@
   width: 68%;
   color: ghostwhite;
   line-height: 1.5em;
-  
 }
 .link-panel a {
   margin: 0 1%;
@@ -45,9 +42,8 @@
   color: currentColor;
   font-size: 1.1em;
   color: white;
-  
 } 
-/*    HOME PAGE */
+      /*    HOME PAGE   */
 .home-body{
   height: 100vh;
 }
@@ -58,8 +54,7 @@
   object-fit: cover;
   z-index: 0;
 }
-
-/*   DOCU   */
+      /*   DOCU   */
 .documental-body {
   display: flex;
   align-items: center;
@@ -92,7 +87,6 @@
 .list-off {
   opacity: 0.7;
 }
-
 .patrocinio{
   margin-bottom: 2%;
   font-size: 1.25em;
@@ -103,24 +97,18 @@
   color: currentColor;
   font-style: oblique;
 }
-
 .video-container {
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
   margin-bottom: 4%;
 }
-
 .video-title {
   font-size: 1.4em;
   margin-top: 1%;
   margin-bottom: 2%;
 }
-
-
-
-/*    FOTO AND GRAFICA */
-
+      /*    IMAGEN  */
 .image-body {
   display: flex;
   flex-wrap: wrap;
@@ -144,9 +132,7 @@
   color: ghostwhite;
   border-radius: 5px;
 }
-
-
-/*    SONORO     */
+        /*    SONORO     */
 .sonoro-body {
   display: flex;
   justify-content: center;
@@ -164,8 +150,6 @@
   width: 95%;
   max-width: 700px;
 }
-/*    TALLER     */
-
 
 footer {
   background-color: hsla(0, 0%, 0%, 0.3);
@@ -190,14 +174,12 @@ footer a {
   color: currentColor;
   font-style: oblique;
 }
-
 .social {
   width: 280px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  
 }
 .social a {
   height: fit-content;
@@ -210,6 +192,7 @@ footer a {
 .social p {
   font-size: 1.3em;
 }
+
 
 @media only screen and (max-width: 630px) {
   .nav-bar {
