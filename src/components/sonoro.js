@@ -1,10 +1,14 @@
 import React from "react";
 import ReactPlayer from 'react-player';
+import sonidoBackground from '../images/fondo_sonido.mp4';
 
 
 const Sonoro = () => {
     return(
         <div className="sonoro-body">
+        <video className="background-video" loop autoPlay muted playsInline >
+              <source src={sonidoBackground} type="video/mp4" />    
+            </video>
         <ReactPlayer
             className="sonoro-player"
             url="https://soundcloud.com/carloslertora/ojos-de-agua"

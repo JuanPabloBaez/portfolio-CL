@@ -47,7 +47,7 @@
 .home-body{
   height: 100vh;
 }
-#background-video {
+.background-video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -65,7 +65,7 @@
   color: ghostwhite;
   overflow:scroll;
   position: relative;
-  justify-content: start;
+  justify-content: flex-start;
   padding-bottom: 10vh;
   height: 100vh;
 }
@@ -132,23 +132,31 @@
   color: ghostwhite;
   border-radius: 5px;
 }
+img {
+  
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
         /*    SONORO     */
 .sonoro-body {
   display: flex;
   justify-content: center;
-  padding-top: 10vh;
-  max-width: 95%;
-  margin: 0 auto;
+  
   height: 100vh;
-  padding-top: 15vh;
+  padding-top: 10vh;
   padding-bottom: 10vh;
   display: flex;
   flex-direction: column;
+  
 }
 .sonoro-player{
   margin: 3% auto;
   width: 95%;
   max-width: 700px;
+  z-index: 1;
 }
 
 footer {

@@ -9,10 +9,14 @@ import Nav from './components/nav';
 import Documental from './components/documental';
 import Imagen from './components/imagen';
 import Sonoro from './components/sonoro';
-import videoBackground from './images/video-background.mp4';
 import Instagram from './images/instagram.svg';
 import './fonts/font.css'
 import './App.css';
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+const fondos = importAll(require.context('./images/home', false, /,*\.mp4$/));
 
 
 function App() {
@@ -49,7 +53,6 @@ function App() {
 
   }, []);
 
-  
 
   return (
     <Router>
@@ -57,8 +60,8 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="home-body">
-            <video id="background-video" loop autoPlay muted playsInline >
-              <source src={videoBackground} type="video/mp4" />    
+            <video className="background-video" loop autoPlay muted playsInline >
+              <source src={fondos[(Math.floor(Math.random()*fondos.length))].default} type="video/mp4" />    
             </video>
           </div>
         </Route>
