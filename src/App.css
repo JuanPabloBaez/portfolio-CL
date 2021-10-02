@@ -133,7 +133,6 @@
   border-radius: 5px;
 }
 img {
-  
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -145,16 +144,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   height: 100vh;
   padding-top: 10vh;
   padding-bottom: 10vh;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
   
 }
 .sonoro-player{
-  margin: 3% auto;
+  margin: 2% auto;
   width: 95%;
   max-width: 700px;
   z-index: 1;
