@@ -114,6 +114,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 15vh;
+  padding-bottom: 8vh;
   height: 100vh;
   width: fit-content;
   max-width: 95%;
@@ -200,6 +201,22 @@ footer a {
 .social p {
   font-size: 1.3em;
 }
+
+
+.scroll-to-Top{
+  position: fixed; 
+  height: 175px;
+  z-index: 5;
+  cursor: pointer;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+
 
 
 @media only screen and (max-width: 630px) {
