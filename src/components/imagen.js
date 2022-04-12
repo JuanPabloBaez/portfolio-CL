@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Gallery } from 'react-grid-litebox';
 import 'react-grid-litebox/dist/index.css';
-
+/* import ScrollToTop from './ScrollToTop.js' */
 
 
 
@@ -9,6 +9,7 @@ const Imagen = ({images}) => {
     const [galleryPic, setGalleryPic] = useState([]);
     const [galleryName, setGalleryName] = useState("")
     
+
     let collages = images.filter((item)=> item.fields.tag==="collage" ).map((item)=>{
        return (
          { 
@@ -27,6 +28,7 @@ const Imagen = ({images}) => {
      )
    });
     
+   
 
     useEffect(() => {
       function setImages () {
@@ -58,12 +60,7 @@ const Imagen = ({images}) => {
         
         <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>
         
-        
-        {/* {galleryPic.map((pic, index) => {
-          return(
-          <img className="gallery-img" key={index} src={pic.src} alt={pic.caption} />
-          )
-       })} */}
+       {/*  <ScrollToTop /> */}
         
     </div>
   )

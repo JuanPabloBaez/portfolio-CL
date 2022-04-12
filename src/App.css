@@ -203,19 +203,36 @@ footer a {
 }
 
 
-.scroll-to-Top{
-  position: fixed; 
-  height: 175px;
-  z-index: 5;
+.scroll-to-top{
+  position: fixed;
+  display: flex; 
+  width: fit-content;
+  bottom: 50px;
+  right: 80px;
+  align-items: center;
+  height: 60px;
+  color: white;
+  
+  z-index: 10;
   cursor: pointer;
+  animation: fadeIn 0.3s;
   transition: opacity 0.4s;
-  opacity: 0.5;
+  opacity: 0.6;
+  border: white;
+
 }
 
-.scrollTop:hover{
+.scroll-to-top:hover{
   opacity: 1;
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 
 
 

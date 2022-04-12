@@ -41,8 +41,9 @@ function App() {
             const selectTalleres = data.filter(item => item.sys.contentType.sys.id==="talleres");
             setTalleres(selectTalleres);
             
-            const selectImages = data.filter(item => item.sys.contentType.sys.id==="image")
-            setImages(selectImages)
+            const selectImages = data.filter(item => item.sys.contentType.sys.id==="image");
+            setImages(selectImages);
+            
           return
         })
       }catch(error){
@@ -53,6 +54,7 @@ function App() {
 
   }, []);
 
+  
 
   return (
     <Router>
@@ -80,7 +82,7 @@ function App() {
       </Switch>
 
       <footer>
-        <p>&copy; Carlos Lértora 2021</p>
+        <p>&copy; Carlos Lértora  {new Date().getFullYear()}</p>
         <div className="social">
           <a href="mailto:carloslertora@gmail.com">carloslertora@gmail.com</a>
           <a href="https://www.instagram.com/carlos_lertora/" target="_blank" rel="noreferrer"><img id="insta-logo" src={Instagram} alt="video icon"></img></a>
