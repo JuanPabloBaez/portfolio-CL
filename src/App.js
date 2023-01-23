@@ -24,7 +24,8 @@ function App() {
   const [video, setVideo] = useState([]);
   const [musical, setMusical] = useState([]);
   const [talleres, setTalleres] = useState([]);
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState([]);
+  const [sonidos, setSonidos] = useState([])
 
   useEffect(() => {
     async function getEntries() {
@@ -40,9 +41,12 @@ function App() {
             setMusical(selectMusical);
             const selectTalleres = data.filter(item => item.sys.contentType.sys.id==="talleres");
             setTalleres(selectTalleres);
-            
             const selectImages = data.filter(item => item.sys.contentType.sys.id==="image");
             setImages(selectImages);
+            const selectSonidos = data.filter(item => item.sys.contentType.sys.id==="sonido");
+            setSonidos(selectSonidos[0].fields.sonido)
+            
+            
             
           return
         })
@@ -52,9 +56,7 @@ function App() {
     }
   getEntries();
 
-  }, []);
-
-  
+  },[]);
 
   return (
     <Router>
@@ -75,8 +77,8 @@ function App() {
           <Imagen images={images}/>
         </Route>
 
-        <Route path="/sonido">
-          <Sonoro/>
+        <Route path="/sonido" >
+          <Sonoro sonidos={sonidos}/>
         </Route>
 
       </Switch>
