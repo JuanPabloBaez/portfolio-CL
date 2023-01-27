@@ -24,8 +24,11 @@ function App() {
   const [video, setVideo] = useState([]);
   const [musical, setMusical] = useState([]);
   const [talleres, setTalleres] = useState([]);
-  const [images, setImages] = useState([]);
-  const [sonidos, setSonidos] = useState([])
+
+  
+  const [foto, setFoto] = useState([])
+  const [collage, setCollage] = useState([])
+  const [sonidos, setSonidos] = useState([]);
 
   useEffect(() => {
     async function getEntries() {
@@ -41,13 +44,12 @@ function App() {
             setMusical(selectMusical);
             const selectTalleres = data.filter(item => item.sys.contentType.sys.id==="talleres");
             setTalleres(selectTalleres);
-            const selectImages = data.filter(item => item.sys.contentType.sys.id==="image");
-            setImages(selectImages);
+            const selectCollages = data.filter(item => item.sys.contentType.sys.id==="galeria").filter(item => item.fields.titulo==="collage").map(item=> item.fields.imagen)
+            setCollage(selectCollages[0]);
+            const selectFotos = data.filter(item => item.sys.contentType.sys.id==="galeria").filter(item => item.fields.titulo==="fotos").map(item=> item.fields.imagen)
+            setFoto(selectFotos[0])
             const selectSonidos = data.filter(item => item.sys.contentType.sys.id==="sonido");
             setSonidos(selectSonidos[0].fields.sonido)
-            
-            
-            
           return
         })
       }catch(error){
@@ -74,7 +76,7 @@ function App() {
         </Route>
         
         <Route path="/imagen">
-          <Imagen images={images}/>
+          <Imagen collage={collage} foto={foto} />
         </Route>
 
         <Route path="/sonido" >

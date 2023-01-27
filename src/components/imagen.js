@@ -1,35 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Gallery } from 'react-grid-litebox';
 import 'react-grid-litebox/dist/index.css';
-/* import ScrollToTop from './ScrollToTop.js' */
 
 
 
-const Imagen = ({images}) => {
+const Imagen = ({foto, collage }) => {
     const [galleryPic, setGalleryPic] = useState([]);
     const [galleryName, setGalleryName] = useState("")
     
-
-    let collages = images.filter((item)=> item.fields.tag==="collage" ).map((item)=>{
-       return (
-         { 
-          src: item.fields.src.fields.file.url, 
-          alt: item.fields.caption
-        }
-      )
-    });
-
-    let photos = images.filter((item)=> item.fields.tag==="foto" ).map((item)=>{
+   let photos = foto.map((item)=>{
       return (
         { 
-         src: item.fields.src.fields.file.url, 
-         alt: item.fields.caption
-       }
-     )
-   });
+          src: item.fields.file.url,
+          alt: item.fields.title
+        }
+      )
+    })  
+   let collages = collage.filter(item=> item.fields).map((item)=>{
+      return (
+        { 
+          src: item.fields.file.url,
+          alt: item.fields.title
+        }
+      )
+    })
+  
     
-   
-
     useEffect(() => {
       function setImages () {
         setGalleryPic(photos)
@@ -37,7 +33,7 @@ const Imagen = ({images}) => {
         return
       }
       setImages();
-    }, [images]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
 
     function handleGallery () {
@@ -56,12 +52,7 @@ const Imagen = ({images}) => {
   return (
     <div className="image-body">
         <button onClick={handleGallery} >{galleryName==="photos" ? <p><b>FOTOGRAFÍA</b> / COLLAGE</p>: <p>FOTOGRAFÍA / <b>COLLAGE</b> </p>}</button>
-
-        
-        <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>
-        
-       {/*  <ScrollToTop /> */}
-        
+       { galleryPic && <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>}
     </div>
   )
 }
