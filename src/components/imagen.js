@@ -33,7 +33,7 @@ const Imagen = ({foto, collage }) => {
         return
       }
       setImages();
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [foto, collage]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
     function handleGallery () {
@@ -52,7 +52,7 @@ const Imagen = ({foto, collage }) => {
   return (
     <div className="image-body">
         <button onClick={handleGallery} >{galleryName==="photos" ? <p><b>FOTOGRAFÍA</b> / COLLAGE</p>: <p>FOTOGRAFÍA / <b>COLLAGE</b> </p>}</button>
-       { galleryPic && <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>}
+       <Gallery images={galleryPic} thumbnailSize={{height: 350, width:350}}/>
     </div>
   )
 }
