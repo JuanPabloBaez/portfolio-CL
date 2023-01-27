@@ -6,10 +6,12 @@ import sonidoBackground from '../images/fondo_sonido.mp4';
 const Sonoro = ({sonidos}) => {
    
     return(
-        <div className="sonoro-body">
-        <video className="background-video" loop autoPlay muted playsInline >
+        <>
+         <video className="background-video" loop autoPlay muted playsInline >
               <source src={sonidoBackground} type="video/mp4" />    
             </video>
+        <div className="sonoro-body">
+       
         
         {sonidos.map((item, index)=>{
             return (
@@ -35,6 +37,7 @@ const Sonoro = ({sonidos}) => {
         })}
 
         </div>
+        </>
         
     )
 }

@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 .logo {
   text-decoration: none;
@@ -142,22 +142,19 @@ img {
 }
         /*    SONORO     */
 .sonoro-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   height: 100vh;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
+  overflow:scroll;
   
 }
 .sonoro-player{
   margin: 2% auto;
   width: 95%;
   max-width: 700px;
-  z-index: 1;
+  position:relative;
+  z-index: 3;
 }
 
 footer {
@@ -174,6 +171,7 @@ footer {
   color: ghostwhite;
   top: 95vh;
   font-size: 1em;
+  margin-bottom: 0;
 }
 footer p {
   margin: 0;
